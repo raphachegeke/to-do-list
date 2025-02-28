@@ -1,0 +1,194 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Dark Gradient Background */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+    color: #fff;
+    transition: background 0.3s ease-in-out;
+}
+
+/* Light Mode */
+body.light-mode {
+    background: linear-gradient(135deg, #e6e6e6, #ffffff);
+    color: #222;
+}
+
+/* Container */
+.container {
+    background: #121212;
+    padding: 20px;
+    border-radius: 12px;
+    width: 400px;
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.1);
+    transition: background 0.3s ease-in-out;
+}
+
+/* Light Mode Container */
+body.light-mode .container {
+    background: #fff;
+    color: #222;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading */
+h1 {
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+/* Input & Buttons */
+.input-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+input, select {
+    flex: 1;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    background: #222;
+    color: #fff;
+    outline: none;
+    transition: background 0.3s ease;
+}
+
+body.light-mode input, body.light-mode select {
+    background: #e6e6e6;
+    color: #222;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    background: #007bff;
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+/* Search Bar */
+#searchTask {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: none;
+    background: #222;
+    color: white;
+}
+
+body.light-mode #searchTask {
+    background: #f4f4f4;
+    color: black;
+}
+
+/* Task Counter */
+#taskCounter {
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Task List */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Task Items */
+li {
+    background: #181818;
+    padding: 12px;
+    margin: 5px 0;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.3s ease;
+}
+
+body.light-mode li {
+    background: #f4f4f4;
+}
+
+/* Task Priority Colors */
+.low { border-left: 5px solid #00c853; }
+.medium { border-left: 5px solid #ff9800; }
+.high { border-left: 5px solid #d50000; }
+
+/* Edit & Delete Buttons */
+.edit-btn, .delete-btn {
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.edit-btn {
+    background: #ffeb3b;
+    color: black;
+}
+
+.delete-btn {
+    background: #ff5252;
+    color: white;
+}
+
+.edit-btn:hover { background: #fbc02d; }
+.delete-btn:hover { background: #d32f2f; }
+
+/* Clear All Button */
+#clearAll {
+    width: 100%;
+    margin-top: 10px;
+    background: #444;
+}
+
+#clearAll:hover {
+    background: #666;
+}
+
+/* Progress Bar */
+#progressBarContainer {
+    width: 100%;
+    background: #333;
+    height: 10px;
+    border-radius: 5px;
+    margin: 15px 0;
+}
+
+#progressBar {
+    height: 10px;
+    width: 0%;
+    background: #4caf50;
+    border-radius: 5px;
+    transition: width 0.3s ease;
+}
+
+body.light-mode #progressBarContainer {
+    background: #d6d6d6;
+}
+
+body.light-mode #progressBar {
+    background: #4caf50;
+}

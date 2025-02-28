@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>To-Do List</h1>
+
+        <!-- Search Bar -->
+        <input type="text" id="searchTask" placeholder="Search tasks...">
+
+        <!-- Dark Mode Toggle -->
+        <button id="darkModeToggle">🌙 Toggle Dark Mode</button>
+
+        <div class="input-container">
+            <input type="text" id="taskInput" placeholder="Add a new task...">
+            <select id="taskCategory">
+                <option value="Personal">Personal</option>
+                <option value="Work">Work</option>
+                <option value="Other">Other</option>
+            </select>
+            <select id="taskPriority">
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+            </select>
+            <input type="date" id="dueDate">
+            <button id="addTask">Add</button>
+        </div>
+
+        <p id="taskCounter">Tasks Left: 0</p>
+        <div id="progressBarContainer">
+            <div id="progressBar"></div>
+        </div>
+
+        <ul id="taskList"></ul>
+
+        <button id="clearAll">Clear All</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
